@@ -1,6 +1,6 @@
 <?php
 require 'functions.php';
-// ambil id dari url
+// ambil id dari URL
 $id = $_GET['id'];
 
 $m = query("SELECT * FROM mahasiswa WHERE id=$id");
@@ -20,10 +20,10 @@ $m = query("SELECT * FROM mahasiswa WHERE id=$id");
   <h3>Detail Mahasiswa</h3>
   <ul>
     <li><img src="img/<?= $m['gambar']; ?>" alt=""></li>
-    <li>NRP : 7408040001</li>
-    <li>Nama : Sandhika Galih</li>
-    <li>Email : sandhika@unpas.ac.id</li>
-    <li>Jurusan : Teknik Informatika</li>
+    <li>NRP : <?= $m['nrp']; ?></li>
+    <li>Nama : <?= $m['nama']; ?></li>
+    <li>Email : <?= $m['email']; ?></li>
+    <li>Jurusan : <?= $m['jurusan']; ?></li>
     <li><a href="">ubah</a>|<a href="">hapus</a></li>
     <li><a href="latihan3.php">Kembali ke daftar Mahasiswa</a></li>
   </ul>
